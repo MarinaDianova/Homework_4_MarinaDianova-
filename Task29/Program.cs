@@ -13,13 +13,15 @@ void PrintArray(int[] array)
     int count = array.Length;
     for (int i = 0; i < count; i++)
     {
-        System.Console.Write($"{array[i]} ");
+        System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+        //System.Console.Write($"{array[i]} ");
     }
 }
 
 int[] FillArray(int size, int leftRange, int rightRange)
 {
     int[] arrN = new int[size];
+    Random randon = new Random();
     for (int i = 0; i < size; i++)
     {
         arrN[i] = new Random().Next(leftRange, (rightRange + 1));

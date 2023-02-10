@@ -15,10 +15,23 @@ int Power(int A, int B)
     {
         result = result * A;
     }
-    return (result);
+    return result;
+}
+
+bool ValidateExp(int exp)
+{
+    if (exp < 0)
+    {
+        System.Console.WriteLine("Показатель степени должен быть больше нуля!");
+        return false;
+    }
+    return true;
 }
 
 int numA = GetNumber("Введите число A (число, возводимое в степень): ");
 int numB = GetNumber("Введите число B (показатель степени): ");
 
-System.Console.WriteLine($"{numA} в степени {numB} = {Power(numA, numB)}");
+if (ValidateExp(numB))
+{
+    System.Console.WriteLine($"{numA} в степени {numB} = {Power(numA, numB)}");
+}

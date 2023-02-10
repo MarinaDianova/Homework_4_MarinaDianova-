@@ -3,6 +3,8 @@
 // 82 -> 10
 // 9012 -> 12
 
+// ВАРИАНТ 1. ТЕКСТОВЫЙ
+
 string? GetNumber(string text)
 {
     System.Console.Write(text);
@@ -33,3 +35,26 @@ else
     System.Console.WriteLine("Введено не число!");
 
 }
+
+
+// ВАРИАНТ 2. МАТЕМАТИЧЕСКИЙ
+// int GetNumber(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int SumAllDigits(int number)
+// {
+//     int result = 0;
+//     while(number>0)
+//     {
+//         result+= number%10;
+//         number=number/10;
+//     }
+//     return result;
+// }
+
+// int num = GetNumber("Введите число: ");
+
+// Console.WriteLine($"Сумма цифр чмсла {num} = {SumAllDigits(num)}");
